@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Using ES6 Class Mixins</title>
+  </head>
+
+  <body>
+    <h1>Using ES6 Class Mixin</h1>
+
+    <p>See JS Console</p>
+
+    <script type="module">
+      import {FirstMixin} from './first-mixin.js';
+      import {SecondMixin} from './second-mixin.js';
+
+      class SampleClass extends FirstMixin(SecondMixin()) {
+        sampleMethod() { }
+      }
+
+      const sample = new SampleClass();
+      console.log(sample);
+    </script>
+
+    <script type="nomodule">
+      console.log(`ES6 Modules not supported`);
+    </script>
+  </body>
+</html>
