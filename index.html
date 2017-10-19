@@ -21,8 +21,15 @@
         sampleMethod() { }
       }
 
+      class SampleSecondClass extends SecondMixin(FirstMixin()) {
+        sampleSecondMethod() { }
+      }
+
       const sample = new SampleClass();
       console.log(sample);
+
+      const sample2 = new SampleSecondClass();
+      console.log(sample2);
     </script>
 
     <script type="nomodule">
